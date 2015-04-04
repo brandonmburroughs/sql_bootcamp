@@ -185,7 +185,7 @@ but this is generally how you would import a CSV file with a header. */
 /* Load data from a CSV file into user_logs */
 /* NOTE:  I keep getting a warning saying data is trucated for duration on page.
 I cannot figure out why this happens, but it doesn't seem to affect the data */
-LOAD DATA LOCAL INFILE "/Users/brandonburroughs/Google Drive/General Assembly/SQL Boootcamp/sql_bootcamp/Data/user_logs.csv"
+LOAD DATA LOCAL INFILE "<file_path_to_downloaded_folder>/sql_bootcamp/Data/user_logs.csv"
 INTO TABLE user_logs 
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
@@ -193,14 +193,14 @@ IGNORE 1 LINES
 (time_stamp, user_id, user_logged_in, resolution_id, duration_on_page);
 
 /* Load data from a CSV file into user_profiles */
-LOAD DATA LOCAL INFILE "/Users/brandonburroughs/Google Drive/General Assembly/SQL Boootcamp/sql_bootcamp/Data/user_profiles.csv"
+LOAD DATA LOCAL INFILE "<file_path_to_downloaded_folder>/sql_bootcamp/Data/user_profiles.csv"
 INTO TABLE user_profiles 
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES;
 
 /* Load data from a CSV file into screen_resolutions */
-LOAD DATA LOCAL INFILE "/Users/brandonburroughs/Google Drive/General Assembly/SQL Boootcamp/sql_bootcamp/Data/screen_resolutions.csv"
+LOAD DATA LOCAL INFILE "<file_path_to_downloaded_folder>/sql_bootcamp/Data/screen_resolutions.csv"
 INTO TABLE screen_resolutions 
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
