@@ -7,7 +7,7 @@ you have MySQL running and have downloaded the data repository here:
 
 https://github.com/brandonmburroughs/sql_bootcamp
 
-Begin my connecting to MySQL via the Command Line Tool or your favorite GUI.
+Begin by connecting to MySQL via the Command Line Tool or your favorite GUI.
 You can download MySQL Community Server and MySQL Workbench for free.
 
 MySQL Community Server:  http://dev.mysql.com/downloads/mysql/
@@ -76,7 +76,7 @@ rows and the query execution time. Most interfaces provide this. */
 /* An alternative and often used syntax to look at all of the columns is the *
 operator.  '*' means all of the columns. */
 SELECT *
-from sql_bootcamp_students;
+FROM sql_bootcamp_students;
 
 /* But we forgot to add an extra column to denote private/public sector job.
 We can use the ALTER TABLE command to add an extra column. */
@@ -185,7 +185,7 @@ but this is generally how you would import a CSV file with a header. */
 /* Load data from a CSV file into user_logs */
 /* NOTE:  I keep getting a warning saying data is trucated for duration on page.
 I cannot figure out why this happens, but it doesn't seem to affect the data */
-LOAD DATA LOCAL INFILE "<file_path_to_sql_bootcamp_folder>/Data/user_logs.csv"
+LOAD DATA LOCAL INFILE "/Users/brandonburroughs/Google Drive/General Assembly/SQL Boootcamp/sql_bootcamp/Data/user_logs.csv"
 INTO TABLE user_logs 
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
@@ -193,14 +193,14 @@ IGNORE 1 LINES
 (time_stamp, user_id, user_logged_in, resolution_id, duration_on_page);
 
 /* Load data from a CSV file into user_profiles */
-LOAD DATA LOCAL INFILE "<file_path_to_sql_bootcamp_folder>/Data/user_profiles.csv"
+LOAD DATA LOCAL INFILE "/Users/brandonburroughs/Google Drive/General Assembly/SQL Boootcamp/sql_bootcamp/Data/user_profiles.csv"
 INTO TABLE user_profiles 
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES;
 
 /* Load data from a CSV file into screen_resolutions */
-LOAD DATA LOCAL INFILE "<file_path_to_sql_bootcamp_folder>/Data/screen_resolutions.csv"
+LOAD DATA LOCAL INFILE "/Users/brandonburroughs/Google Drive/General Assembly/SQL Boootcamp/sql_bootcamp/Data/screen_resolutions.csv"
 INTO TABLE screen_resolutions 
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
