@@ -44,10 +44,12 @@ USE sql_bootcamp;
 DROP TABLE IF EXISTS sql_bootcamp_students;
 /* Create a table to store student information */
 CREATE TABLE sql_bootcamp_students (
+	person_id INT NOT NULL AUTO_INCREMENT, 
 	first_name VARCHAR(30) NOT NULL,
 	last_name VARCHAR(30),
 	age INT,
-	job_title VARCHAR(50)
+	job_title VARCHAR(50),
+    PRIMARY KEY (person_id)
 );
 
 /* Now let's look at the tables available */
@@ -89,6 +91,14 @@ UPDATE sql_bootcamp_students
 SET sector = 'Private'
 WHERE last_name = 'Burroughs';
 
+/* But what if there are two people with the last name 'Burroughs'?  Maybe try
+using the first and last name?  But there could still be two students with the
+same first and last name.  This is why you'll often see that users are referred
+to by an id.  Let's try again. */
+UPDATE sql_bootcamp_students
+SET sector = 'Private'
+WHERE person_id = 1;
+
 /* Let's INSERT another row */
 INSERT INTO sql_bootcamp_students
 VALUES ("Faheem", "Khemani", 26, "Associate Product Manager", "Private");
@@ -122,8 +132,9 @@ ORDER BY age DESC;
 Use the DELETE function to get rid of specific values or a range of values
 based upon a condition. */
 DELETE FROM sql_bootcamp_students
-WHERE last_name = 'Burroughs';
+WHERE person_id = 1;
 
+/* Let's look to make sure it's gone */
 SELECT *
 FROM sql_bootcamp_students;
 
