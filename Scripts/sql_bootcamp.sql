@@ -100,12 +100,12 @@ SET sector = 'Private'
 WHERE person_id = 1;
 
 /* Let's INSERT another row */
-INSERT INTO sql_bootcamp_students
+INSERT INTO sql_bootcamp_students (first_name, last_name, age, job_title, sector)
 VALUES ("Faheem", "Khemani", 26, "Associate Product Manager", "Private");
 
 /* Now try inserting another row with your own data by replacing the values. */
 /* You can omit specific column names if you provide values for every column */
-INSERT INTO sql_bootcamp_students
+INSERT INTO sql_bootcamp_students (first_name, last_name, age, job_title, sector)
 VALUES (first_name, last_name, age, job_title, sector);
 
 /* Let's take a look at the job_title column */
